@@ -1,0 +1,337 @@
+body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #fff;
+  color: #000; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Poppins", sans-serif; }
+
+a {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease; }
+  a, a:hover {
+    text-decoration: none !important; }
+
+.content {
+  padding: 7rem 0; }
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 700; }
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700; }
+
+.grad{
+  font-size: 72px;
+  background: linear-gradient(to right bottom, hsl(192, 96%, 49%), hsl(216, 89%, 18%));
+ 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0; }
+  .form-control:active, .form-control:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #000; }
+.btn{
+  background: linear-gradient(to right bottom, hsl(192, 96%, 49%), hsl(216, 89%, 18%));
+ color: whitesmoke;
+ border-radius: 25px;
+ 
+ border: none;
+}
+.btn, .form-control {
+  height: 55px; }
+
+form.border-right {
+  padding-right: 6rem !important; }
+  @media (max-width: 991.98px) {
+    form.border-right {
+      padding-right: 0 !important;
+      border-right: none !important; } }
+
+label.error {
+  font-size: 12px;
+  color: red; }
+
+#message {
+  resize: vertical; }
+
+#form-message-warning, #form-message-success {
+  display: none; }
+
+#form-message-warning {
+  color: #B90B0B; }
+
+#form-message-success {
+  color: #55A44E;
+  font-size: 18px;
+  font-weight: bold; }
+
+.submitting {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  display: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000; }
+
+
+.rad-label {
+  display: flex;
+  align-items: center;
+
+  border-radius: 100px;
+  padding: 14px 16px;
+  margin: 10px 0;
+
+  cursor: pointer;
+  transition: .3s;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: hsla(0, 0%, 80%, .14);
+}
+
+.rad-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+
+  background: linear-gradient(to right bottom, hsl(192, 96%, 49%), hsl(216, 89%, 18%));
+  position: relative;
+}
+
+.rad-design::before {
+  content: '';
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.rad-input:checked+.rad-design::before {
+  transform: scale(0);
+}
+
+.radlabel{
+  color: rgb(121, 121, 121);
+  font-size: 16px;
+}
+
+.rad-text {
+  color: hsl(0, 0%, 60%);
+  margin-left: 14px;
+
+  font-size: 18px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.rad-input:checked~.rad-text {
+  color: hsl(0, 0%, 40%);
+}
+
+
+  
+
+label.field {
+  border-radius: 2px;
+  color: rgb(121, 121, 121);
+  display: block;
+  
+  
+  padding-top: 20px;
+  opacity: 0;
+  position: relative;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  z-index: 1;
+}
+label.field span {
+  color: inherit;
+  display: block;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+  color: #696969;
+  pointer-events: none;
+  position: absolute;
+  top: 17px;
+  -webkit-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0);
+  -webkit-transition-property: color, font-size, top;
+  transition-property: color, font-size, top;
+  z-index: 1;
+}
+label.field span.required::after {
+  color: inherit;
+  content: "*";
+  display: block;
+  height: 20px;
+  left: -20px;
+  
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 20px;
+}
+.error label.field span {
+  color: #f02318;
+}
+label.field .psuedo_select {
+  
+  position: relative;
+  
+  border-style: solid;
+  border-width: 0 0 0.3px 0;
+ border-color: rgb(90, 90, 90,0.3);
+  
+  cursor: pointer;
+  font-size: 16px;
+  height: 24px;
+  line-height: 24px;
+
+
+ padding-top: 34px;
+  outline: 0;
+  z-index: 1;
+}
+label.field .psuedo_select::after {
+  background: url("data:image/svg+xml;utf8,<svg fill='#666' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'> <path d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/> <path d='M0-.75h24v24H0z' fill='none'/> </svg>"),
+    no-repeat;
+  content: "";
+  height: 24px;
+  
+  width: 24px;
+  position: absolute;
+ 
+  right: 0;
+  -webkit-transition-property: background;
+  transition-property: background;
+}
+label.field .psuedo_select .selected {
+  height: 24px;
+  left: 1px;
+  line-height: 24px;
+  opacity: 0;
+  position: absolute;
+  padding-top: 5px;
+  color: #696969;
+  top: 0;
+  -webkit-transform: translateY(24px);
+  transform: translateY(24px);
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  will-change: transform;
+}
+label.field .psuedo_select ul {
+  border-radius: 0px 0px 5px 5px;
+  background: rgb(44, 44, 44);
+  box-shadow: 0 1px 4px 0 rgba(12, 87, 138, 0.521);
+  display: block;
+ 
+  list-style: none;
+  
+  margin-top: 2px;
+  
+ 
+  opacity: 0;
+  overflow: hidden;
+ 
+  pointer-events: none;
+  -webkit-transition-property: height, opacity;
+  transition-property: height, opacity;
+  width: 100%;
+  z-index: 2;
+}
+label.field .psuedo_select ul li {
+  height: 32px;
+  padding: 8px 4px;
+  
+}
+
+label.field .deselect {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  
+  width: 100vw;
+  z-index: -1;
+}
+label.field.focused {
+  
+  color: #f3f3f3;
+}
+label.field.focused .psuedo_select {
+  border-color: #007aed00;
+  
+}
+label.field.focused .psuedo_select::after {
+  background: url("data:image/svg+xml;utf8,<svg fill='#007BED' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'> <path d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/> <path d='M0-.75h24v24H0z' fill='none'/> </svg>"),
+    no-repeat;
+    
+}
+label.field.focused .psuedo_select ul {
+  opacity: 1;
+  pointer-events: all;
+  
+}
+
+.nav{
+  padding: 5px;
+  background-color: #0879ad;
+}
+.gif{
+  
+  width: 60vh;
+
+}
+
+.leftDiv h3{
+  font-size: 50px;
+}
+.leftDiv a{
+  font-size: 15px;
+}
+
+.leftDiv svg{
+  color:rgb(18, 73, 90)
+}
+
+footer{
+  padding: 15px;
+  background-color: #303030;
+}
